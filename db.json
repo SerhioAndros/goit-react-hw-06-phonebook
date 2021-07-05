@@ -1,0 +1,49 @@
+{
+  "contacts": [
+    {
+      "id": "ghy7di3",
+      "name": "Harry Potter",
+      "number": "111-11-11"
+    },
+    {
+      "id": "987bfh3",
+      "name": "Hermione Granger",
+      "number": "222-22-22"
+    },
+    {
+      "id": "fgqo72m",
+      "name": "Ron Weasley",
+      "number": "333-33-33"
+    },
+    {
+      "id": "dt6w34l",
+      "name": "Luna Lovegood",
+      "number": "444-44-44"
+    },
+    {
+      "id": "8s532gk",
+      "name": "Ginny Weasley",
+      "number": "555-55-55"
+    },
+    {
+      "id": "dt5434s",
+      "name": "Lord Voldemort",
+      "number": "666-66-66"
+    },
+    {
+      "id": "p96gq22",
+      "name": "Neville Longbottom",
+      "number": "777-77-77"
+    },
+    {
+      "id": "ftw528j",
+      "name": "Severus Snape",
+      "number": "888-88-88"
+    },
+    {
+      "id": "sdyu3w1",
+      "name": "Albus Dumbledore",
+      "number": "999-99-99"
+    }
+  ]
+}

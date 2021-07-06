@@ -4,6 +4,10 @@ import PropTypes from "prop-types";
 import styles from "./ContactList.module.css";
 import { connect } from "react-redux";
 import { deleteContact } from "../../redux/contacts-operations";
+import {
+  getFilteredContacts,
+  getContacts,
+} from "../../redux/contacts-selectors";
 
 const ContactList = ({ contacts, onClick }) => (
   <ul className={styles.contactList}>
@@ -30,20 +34,13 @@ ContactList.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
-const handleFilter = (allContacts, filter) => {
-  const filterNormilized = filter.toLowerCase().trim();
-  return allContacts.filter(({ name }) =>
-    name.toLocaleLowerCase().trim().includes(filterNormilized)
-  );
-};
-
 const mapStateToProps = (state) => {
-  const { contactItems, contactFilter } = state.contacts;
-  if (!contactFilter) {
-    return { contacts: contactItems };
+  if (!getFilteredContacts(state)) {
+    return {
+      contacts: getContacts(state),
+    };
   }
-  const filteredContacts = handleFilter(contactItems, contactFilter);
-  return { contacts: filteredContacts };
+  return { contacts: getFilteredContacts(state) };
 };
 
 const mapDispatchToProps = (dispatch) => ({
